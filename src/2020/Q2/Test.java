@@ -1,4 +1,4 @@
-package Question2;
+package 2020.Q2;
 
 public class Test {
 }

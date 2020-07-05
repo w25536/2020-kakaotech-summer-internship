@@ -1,4 +1,4 @@
-package Question2;
+package 2020.Q2;
 
 import java.io.IOException;
 import java.util.Scanner;
