@@ -4,6 +4,8 @@ package kakaotech2020.Q1;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.sql.SQLOutput;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Main {
@@ -41,46 +43,17 @@ public class Main {
     }
 
     static Keystroke p(int a){
-        switch (a){
-            case 1:
-                return new Keystroke(0,0);
-            case 2:
-                return new Keystroke(0,1);
-            case 3:
-                return new Keystroke(0,2);
-            case 4:
-                return new Keystroke(1,0);
-            case 5:
-                return new Keystroke(1,1);
-            case 6:
-                return new Keystroke(1,2);
-            case 7:
-                return new Keystroke(2, 0);
-            case 8:
-                return new Keystroke(2,1);
-            case 9 :
-                return new Keystroke(2,2);
-            case 11 :
-                return new Keystroke(3,1);
-            case 10 :
-                return new Keystroke(3, 0);
-            case 12 :
-                return new Keystroke(3,2);
-        }
-        return  null;
-    }
-
-
-
-    static int distance(int a, int b) {
-
-        int dist = 0;
-
-        dist = Math.abs(p(a).getX() - p(b).getX()) + Math.abs(p(a).getY() - p(b).getY());
-
-        return dist;
+        int x = 0;
+        int y = 0;
+        x = ((a-1))/3;
+        y =((a-1)%3);
+        return new Keystroke(x, y);
 
     }
+
+
+
+    static int distance(int a, int b) { int dist = 0; dist = Math.abs(p(a).getX() - p(b).getX()) + Math.abs(p(a).getY() - p(b).getY()); return dist; }
 
 
 
@@ -151,9 +124,6 @@ public class Main {
         }
 
         String ans = solution(numbers, hand);
-
-
-
 
 
     }
