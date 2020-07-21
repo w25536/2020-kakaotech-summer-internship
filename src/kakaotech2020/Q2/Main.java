@@ -32,7 +32,9 @@ public class Main {
 
 
 
-    public static void soluton(String s) {
+    public static long solution(String s) {
+
+        long answer = 0;
 
         char[] expressions = s.toCharArray();
 
@@ -51,7 +53,7 @@ public class Main {
             }
         }
 
-
+        return  answer;
     }
 
         
@@ -60,23 +62,11 @@ public class Main {
         //int n = Integer.valueOf(br.readLine());
         String n = br.readLine();
 
-        soluton(n);
+        solution(n);
         conv(numberStack);
 
 
-        System.out.println("Size of numberStack: " +numberStack.size());
 
-        System.out.println("Size of operatorStack " +operatorStack.size());
-
-
-
-//        for (int i = 0; i < numberStack.size(); i++) {
-//            System.out.println(numberStack.pop());
-//        }
-//
-//        for (int i = 0; i < operatorStack.size(); i++) {
-//            System.out.println(operatorStack.pop());
-//        }
 
 
     }
